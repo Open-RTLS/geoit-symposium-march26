@@ -184,7 +184,7 @@ body {
 .title-slide {
   justify-content: flex-start !important;
   align-items: flex-start !important;
-  padding-top: 3.4rem !important;
+  padding-top: 0 !important;
 }
 
 .title-layout {
@@ -193,7 +193,7 @@ body {
   gap: 1.6rem;
   width: 100%;
   align-items: start;
-  margin-top: 3.4rem;
+  margin-top: 0;
 }
 
 .title-copy h1 {
@@ -273,8 +273,8 @@ body {
 
 .qrcode-slot img,
 .qrcode-slot svg {
-  width: 66px;
-  min-width: 66px;
+  width: 99px;
+  min-width: 99px;
   height: auto;
 }
 
@@ -314,6 +314,14 @@ body {
 .info-card p,
 .info-card li {
   font-size: 0.95rem;
+}
+
+.mapping-stack-visual {
+  display: block;
+  width: min(100%, 860px);
+  max-height: 280px;
+  margin: 0.8rem auto 0;
+  object-fit: contain;
 }
 
 .card-note {
@@ -419,6 +427,21 @@ body {
 .company-copy li {
   font-size: 0.84rem;
   margin-bottom: 0.22em;
+}
+
+.partner-slide-intro {
+  max-width: 920px;
+  margin: 0.2rem 0 0;
+  font-size: 1rem;
+}
+
+.partner-wall-image {
+  display: block;
+  width: min(100%, 1100px);
+  max-height: 480px;
+  margin: 1.4rem auto 0;
+  object-fit: contain;
+  border-radius: 18px;
 }
 
 .team-strip {

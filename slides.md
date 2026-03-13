@@ -111,7 +111,14 @@ Integrating RTLS hardware means doing the same types of integrations over and ov
 > Too much RTLS effort goes into rebuilding plumbing instead of delivering usable location products.
 
 ---
-## Why start with indoor mapping
+## Partners we work with
+
+<p class="partner-slide-intro">Over the years, FORMATION has built up a network of partners that spans the whole of the RTLS ecosystem: everything from QR codes, bar code scanners, GPS, Bluetooth, UWB, to IOT middleware.</p>
+
+<img src="assets/logo-wall.webp" alt="Formation partner logo wall" class="partner-wall-image" />
+
+---
+## Why start with indoor mapping?
 
 Indoor mapping is the substrate the rest of the RTLS stack depends on.
 
@@ -130,7 +137,7 @@ Indoor mapping is the substrate the rest of the RTLS stack depends on.
   </div>
 </div>
 
-![Indoor Mapping Stack](assets/mapping-stack.svg)
+<img src="assets/mapping-stack.svg" alt="Indoor Mapping Stack" class="mapping-stack-visual" />
 
 ---
 ## Standards alignment

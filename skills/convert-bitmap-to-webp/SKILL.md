@@ -7,6 +7,8 @@ description: Convert PNG, JPG, and JPEG assets to WebP with `cwebp`. Use when Co
 
 Use this skill when a bitmap asset should become `.webp` and the source bitmap should usually be removed after references are updated.
 
+The input file does not need to live inside the repo. You can convert a bitmap from another path, such as `~/Downloads`, and then move or copy the generated `.webp` into `assets/` before updating references.
+
 Prefer the bundled script for consistent quality settings and safe batch handling.
 
 ## Workflow
@@ -24,6 +26,13 @@ node skills/convert-bitmap-to-webp/scripts/convert_bitmap_to_webp.js assets/scre
 node skills/convert-bitmap-to-webp/scripts/convert_bitmap_to_webp.js assets/screenshots/tryformation.png assets/screenshots/formationxyz.png
 ```
 
+You can also convert a bitmap outside the repo:
+
+```bash
+node skills/convert-bitmap-to-webp/scripts/convert_bitmap_to_webp.js ~/Downloads/logo-wall.png
+mv ~/Downloads/logo-wall.webp assets/logo-wall.webp
+```
+
 3. Update all references from `.png`/`.jpg`/`.jpeg` to `.webp`.
 
 4. Remove the source bitmap files only after reference updates are complete and verified.
@@ -34,6 +43,7 @@ node skills/convert-bitmap-to-webp/scripts/convert_bitmap_to_webp.js assets/scre
 - Preserve the original basename and directory.
 - Write `foo.webp` next to `foo.png` or `foo.jpg`.
 - Do not delete the source file inside the script. Delete it explicitly after reference updates succeed.
+- If the source file lives outside the repo, move or copy the generated `.webp` into the target repo location explicitly.
 
 ## Reference Update Rule
 
