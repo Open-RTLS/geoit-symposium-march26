@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Open RTLS for Indoor Mapping</title>
+  <link rel="icon" type="image/svg+xml" href="assets/open-rtls-logo.svg" />
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5.0.5/dist/reveal.css" />
+  <link rel="stylesheet" href="open-rtls.css" />
+</head>
+
+<body>
+  <div class="slide-header">
+    <div class="brand-lockup">
+      <img src="assets/open-rtls-logo.svg" alt="Open RTLS logo" />
+      <div class="brand-text">Open RTLS</div>
+    </div>
+    <div>Indoor Mapping Strategy</div>
+  </div>
+
+  <div class="reveal">
+    <div class="slides">
+      <section data-markdown="slides.md" data-separator="^---$" data-separator-vertical="^--$"
+        data-separator-notes="^Note:"></section>
+    </div>
+  </div>
+
+  <div class="slide-footer">
+    <div class="footer-meta">
+      <a href="https://open-rtls.com">open-rtls.com</a>
+      <span>&copy; 2026 FORMATION GmbH</span>
+    </div>
+    <span id="slide-counter"></span>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@5.0.5/dist/reveal.js"></script>
+  <script src="https://unpkg.com/reveal.js@5.0.5/plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@5.0.5/plugin/markdown/markdown.js"></script>
+
+  <script>
+    Reveal.initialize({
+      hash: true,
+      hashOneBasedIndex: true,
+      transition: 'fade',
+      backgroundTransition: 'fade',
+      plugins: [RevealNotes, RevealMarkdown],
+      overview: false,
+      controls: true,
+      progress: true,
+      slideNumber: true,
+      center: true
+    });
+
+    function syncChrome(slide) {
+      const isTitle = slide.classList.contains('title-slide');
+      document.querySelector('.slide-header').style.display = isTitle ? 'none' : '';
+      document.querySelector('.slide-footer').style.display = isTitle ? 'none' : '';
+    }
+
+    function updateSlideCount() {
+      const footer = document.getElementById('slide-counter');
+      const idx = Reveal.getSlidePastCount() + 1;
+      const total = Reveal.getTotalSlides();
+      footer.textContent = `Slide ${idx} of ${total}`;
+    }
+
+    Reveal.on('ready', event => {
+      syncChrome(event.currentSlide);
+      updateSlideCount();
+    });
+
+    Reveal.on('slidechanged', event => {
+      syncChrome(event.currentSlide);
+      updateSlideCount();
+    });
+  </script>
+
+</body>
+
+</html>
