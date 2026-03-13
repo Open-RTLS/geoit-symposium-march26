@@ -41,27 +41,37 @@
 ---
 ## Who are we
 
-Open RTLS is initiated by FORMATION GmbH and built alongside two related initiatives.
-
 <div class="company-grid">
   <div class="company-card">
     <img src="assets/screenshots/tryformation.webp" alt="Screenshot of tryformation.com" class="site-shot" />
     <div class="company-copy">
       <h3>tryformation.com</h3>
-      <ul>
-        <li>Digital product studio behind Open RTLS</li>
-        <li>Product strategy, platform delivery, and geospatial software</li>
-      </ul>
+      <p class="company-pitch">Real-time location intelligence for physical operations, with a live operational map of assets, locations, and activity.</p>
     </div>
   </div>
   <div class="company-card">
     <img src="assets/screenshots/formationxyz.webp" alt="Screenshot of formationxyz.com" class="site-shot" />
     <div class="company-copy">
       <h3>formationxyz.com</h3>
-      <ul>
-        <li>R&amp;D and venture vehicle around new product bets</li>
-        <li>Explores emerging ecosystems and technical market opportunities</li>
-      </ul>
+      <p class="company-pitch">Our consulting and solution engineering branch for practical AI work with real customers. We use it to experiment with agentic systems, Openclaw, and automation in production settings, then feed those learnings back into our core products.</p>
+    </div>
+  </div>
+</div>
+
+<div class="team-strip">
+  <h3>3 Dudes with Laptops</h3>
+  <div class="team-grid">
+    <div class="team-card">
+      <strong>Ian Hannigan</strong>
+      <p>CEO</p>
+    </div>
+    <div class="team-card">
+      <strong>Jilles van Gurp</strong>
+      <p>CTO</p>
+    </div>
+    <div class="team-card">
+      <strong>Jacob Otto</strong>
+      <p>Lead Engineer</p>
     </div>
   </div>
 </div>
