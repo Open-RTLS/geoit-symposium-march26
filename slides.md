@@ -4,7 +4,16 @@
   <div class="title-copy">
     <h1>Open RTLS for Indoor Mapping</h1>
     <h2>GEOIT 2026</h2>
-    <h3>Jilles van Gurp</h3>
+  </div>
+  <div class="title-meta">
+    <div class="title-author">
+      <h3>Jilles van Gurp</h3>
+    </div>
+    <div class="title-aside">
+      <img src="assets/open-rtls-logo.svg" alt="Open RTLS logo" class="title-logo" />
+    </div>
+  </div>
+  <div class="title-support">
     <p class="hero-kicker">A mapping-first strategy for interoperable indoor location systems</p>
     <div class="qr-grid">
       <div class="qr-card">
@@ -26,9 +35,6 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="title-aside">
-    <img src="assets/open-rtls-logo.svg" alt="Open RTLS logo" class="title-logo" />
   </div>
 </section>
 
