@@ -77,30 +77,38 @@
 </div>
 
 ---
-## The problem
+## Groundhog Day
 
-Indoor mapping in RTLS projects is still fragmented.
+Integrating RTLS hardware means doing the same types of integrations over and over again.
 
-<div class="card-grid two-up">
+<div class="card-grid three-up compact">
   <div class="info-card">
-    <h3>Every deployment starts over</h3>
+    <h3>Everyone reinvents the same wheels</h3>
     <ul>
-      <li>Venue models recreated per project</li>
-      <li>Tooling differs by vendor and integrator</li>
-      <li>Map quality is hard to validate consistently</li>
+      <li>Indoor maps and mapping platforms rebuilt vendor by vendor</li>
+      <li>No standard mapping formats across deployments</li>
+      <li>Many RTLS companies still rely on bitmaps</li>
     </ul>
   </div>
   <div class="info-card">
-    <h3>Integration cost stays high</h3>
+    <h3>RTLS IoT hubs are all different</h3>
     <ul>
-      <li>Maps, hubs, events, and apps rarely fit together cleanly</li>
-      <li>Indoor and geospatial workflows stay disconnected</li>
-      <li>Operational updates remain manual and brittle</li>
+      <li>Every vendor has their own hub model</li>
+      <li>Walled gardens built around SDKs and proprietary technology</li>
+      <li>Low interoperability and hard vendor lock-in</li>
+    </ul>
+  </div>
+  <div class="info-card">
+    <h3>The result is predictable</h3>
+    <ul>
+      <li>High-cost, vendor-specific integrations</li>
+      <li>Poor UX and ugly maps</li>
+      <li>Wasted time on non-differentiating infrastructure</li>
     </ul>
   </div>
 </div>
 
-> Teams spend time rebuilding infrastructure instead of delivering user value.
+> Too much RTLS effort goes into rebuilding plumbing instead of delivering usable location products.
 
 ---
 ## Why start with indoor mapping
