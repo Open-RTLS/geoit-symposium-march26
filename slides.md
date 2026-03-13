@@ -39,7 +39,7 @@ Open RTLS is initiated by FORMATION GmbH and built alongside two related initiat
 
 <div class="company-grid">
   <div class="company-card">
-    <img src="assets/screenshots/tryformation.png" alt="Screenshot of tryformation.com" class="site-shot" />
+    <img src="assets/screenshots/tryformation.webp" alt="Screenshot of tryformation.com" class="site-shot" />
     <div class="company-copy">
       <h3>tryformation.com</h3>
       <ul>
@@ -49,7 +49,7 @@ Open RTLS is initiated by FORMATION GmbH and built alongside two related initiat
     </div>
   </div>
   <div class="company-card">
-    <img src="assets/screenshots/formationxyz.png" alt="Screenshot of formationxyz.com" class="site-shot" />
+    <img src="assets/screenshots/formationxyz.webp" alt="Screenshot of formationxyz.com" class="site-shot" />
     <div class="company-copy">
       <h3>formationxyz.com</h3>
       <ul>

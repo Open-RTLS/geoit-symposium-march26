@@ -28,6 +28,7 @@ This is a standalone Reveal.js presentation project for the Open RTLS GEOIT talk
 - Preserve the indoor-mapping-first narrative unless the user asks to reposition the talk.
 - Keep the visual style aligned with `open-rtls.com`: light background, restrained typography, subtle borders, minimal accent use.
 - Prefer editing `slides.md`, `open-rtls.css`, and SVG assets over introducing extra tooling or build steps.
+- Convert all new bitmap assets (`.png`, `.jpg`, `.jpeg`) to `.webp` before keeping them in the repo, and update references so raw bitmap source files do not get committed.
 - Keep the project static. Do not add frameworks, bundlers, or package manifests unless explicitly requested.
 - Do not publish or deploy changes unless the user explicitly asks.
 - Do not commit `.cloudflare`, `.wrangler/`, `.env*`, or other local credential/state files.

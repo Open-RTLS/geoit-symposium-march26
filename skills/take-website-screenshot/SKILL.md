@@ -15,13 +15,13 @@ Prefer the bundled script for repeatable results.
 2. Run the bundled script:
 
 ```bash
-node /Users/jillesvangurp/.codex/skills/take-website-screenshot/scripts/capture_website_screenshot.js <url> <output.png>
+node skills/take-website-screenshot/scripts/capture_website_screenshot.js <url> <output.png>
 ```
 
 3. If the page uses a non-standard cookie banner, pass one or more explicit dismiss selectors:
 
 ```bash
-node /Users/jillesvangurp/.codex/skills/take-website-screenshot/scripts/capture_website_screenshot.js \
+node skills/take-website-screenshot/scripts/capture_website_screenshot.js \
   https://example.com \
   assets/screenshots/example.png \
   --dismiss-selector '[data-cookie-accept]' \
@@ -66,7 +66,7 @@ If the site still shows a banner:
 Refresh a screenshot asset for a slide deck:
 
 ```bash
-node /Users/jillesvangurp/.codex/skills/take-website-screenshot/scripts/capture_website_screenshot.js \
+node skills/take-website-screenshot/scripts/capture_website_screenshot.js \
   https://tryformation.com \
   assets/screenshots/tryformation.png
 ```
@@ -74,7 +74,7 @@ node /Users/jillesvangurp/.codex/skills/take-website-screenshot/scripts/capture_
 Capture a page with an explicit consent selector:
 
 ```bash
-node /Users/jillesvangurp/.codex/skills/take-website-screenshot/scripts/capture_website_screenshot.js \
+node skills/take-website-screenshot/scripts/capture_website_screenshot.js \
   https://formationxyz.com \
   assets/screenshots/formationxyz.png \
   --dismiss-selector '[data-cookie-accept]'
@@ -83,7 +83,7 @@ node /Users/jillesvangurp/.codex/skills/take-website-screenshot/scripts/capture_
 Capture a media-heavy page and wait for a stable element:
 
 ```bash
-node /Users/jillesvangurp/.codex/skills/take-website-screenshot/scripts/capture_website_screenshot.js \
+node skills/take-website-screenshot/scripts/capture_website_screenshot.js \
   https://tryformation.com \
   assets/screenshots/tryformation.png \
   --wait-for-selector 'text=The power to know where'
@@ -91,7 +91,7 @@ node /Users/jillesvangurp/.codex/skills/take-website-screenshot/scripts/capture_
 
 ## Script
 
-Use [capture_website_screenshot.js](/Users/jillesvangurp/.codex/skills/take-website-screenshot/scripts/capture_website_screenshot.js).
+Use [capture_website_screenshot.js](/Users/jillesvangurp/git/reveal-presentations/open-rtls-geoit/skills/take-website-screenshot/scripts/capture_website_screenshot.js).
 
 The script:
 
