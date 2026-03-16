@@ -93,6 +93,7 @@ Important:
 Project-local skill docs live in `skills/`.
 
 - `skills/reveal-deck/SKILL.md`: editing, previewing, and validating the presentation
+- `skills/slide-content/SKILL.md`: writing and tightening presentation-first slide copy
 - `skills/cloudflare-pages/SKILL.md`: Pages-specific preview and deployment workflow
 
 When the user asks to deploy or change Pages config, also use the global `$cloudflare-deploy` skill if it is available in the session.
