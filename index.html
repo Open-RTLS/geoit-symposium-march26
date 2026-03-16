@@ -11,14 +11,6 @@
 </head>
 
 <body>
-  <div class="slide-header">
-    <div class="brand-lockup">
-      <img src="assets/open-rtls-logo.svg" alt="Open RTLS logo" />
-      <div class="brand-text">Open RTLS</div>
-    </div>
-    <div>Indoor Mapping Strategy</div>
-  </div>
-
   <div class="reveal">
     <div class="slides">
       <section data-markdown="slides.md" data-separator="^---$" data-separator-vertical="^--$"
@@ -54,7 +46,6 @@
 
     function syncChrome(slide) {
       const isTitle = slide.classList.contains('title-slide');
-      document.querySelector('.slide-header').style.display = isTitle ? 'none' : '';
       document.querySelector('.slide-footer').style.display = isTitle ? 'none' : '';
     }
 

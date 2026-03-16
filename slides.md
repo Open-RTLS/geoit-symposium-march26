@@ -14,7 +14,7 @@
     </div>
   </div>
   <div class="title-support">
-    <p class="hero-kicker">A mapping-first strategy for interoperable indoor location systems</p>
+    <p class="hero-kicker">A mapping-first strategy for interoperable Real-Time Location Systems (RTLS)</p>
     <div class="qr-grid">
       <div class="qr-card">
         <div class="qrcode-slot">
@@ -79,7 +79,7 @@
 ---
 ## Groundhog Day
 
-Integrating RTLS hardware means doing the same types of integrations over and over again.
+Integrating real-time location system (RTLS) hardware means doing the same types of integrations over and over again.
 
 <div class="card-grid three-up compact">
   <div class="info-card">
@@ -140,6 +140,91 @@ Indoor mapping is the substrate the rest of the RTLS stack depends on.
 <img src="assets/mapping-stack.svg" alt="Indoor Mapping Stack" class="mapping-stack-visual" />
 
 ---
+## What is RTLS?
+
+RTLS stands for <strong>Real-Time Location Systems</strong>.
+
+<div class="media-split">
+  <div class="media-split-cards card-grid one-up compact">
+    <div class="info-card">
+      <h3>Not one technology</h3>
+      <p>RTLS is a family of solutions: UWB, BLE, RFID, Wi-Fi, GPS, QR workflows, and hybrids of all of the above.</p>
+    </div>
+    <div class="info-card">
+      <h3>Indoor GPS alternative</h3>
+      <p>It answers a simple question: where are things now, and how is that changing over time when GPS is weak or unavailable?</p>
+    </div>
+    <div class="info-card">
+      <h3>Business value comes later</h3>
+      <p>Coordinates alone are not enough. The useful output is search, zones, paths, alerts, navigation, and workflow decisions.</p>
+    </div>
+  </div>
+  <img src="assets/tracked-welding-equipment-2.webp" alt="Tracked welding equipment with a QR code tag in an industrial environment" class="slide-visual side-visual" />
+</div>
+
+> In practice, RTLS only becomes usable when location data is tied to a shared model of places, floors, zones, and assets.
+
+---
+## Why Open RTLS is needed
+
+<div class="media-split">
+  <div class="media-split-cards card-grid one-up compact">
+    <div class="info-card">
+      <h3>RTLS projects are still too bespoke</h3>
+      <ul>
+        <li>High CapEx and long deployments are common</li>
+        <li>Accuracy, coverage, and adoption often miss expectations</li>
+        <li>Teams keep rebuilding non-differentiating integration layers</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h3>Most stacks optimize for feeds, not context</h3>
+      <ul>
+        <li>Vendors expose coordinates and events</li>
+        <li>Integrators still need places, floors, zones, and map UX</li>
+        <li>Each project remaps the same operational reality again</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h3>Open RTLS targets the missing layer</h3>
+      <ul>
+        <li>Shared map workflows and validation</li>
+        <li>Portable interfaces around standards</li>
+        <li>Less plumbing, faster usable products</li>
+      </ul>
+    </div>
+  </div>
+  <img src="assets/zone-triggers.webp" alt="Operational zone trigger workflow in an industrial facility" class="slide-visual side-visual" />
+</div>
+
+> The real question is usually not “what are the coordinates?” but “is the asset in the right place at the right time?”
+
+---
+## What is IMDF?
+
+IMDF stands for <strong>Indoor Mapping Data Format</strong>.
+
+<div class="media-split">
+  <div class="media-split-cards card-grid one-up compact">
+    <div class="info-card">
+      <h3>OGC indoor map model</h3>
+      <p>The OGC IMDF standard defines a generalized but comprehensive model for indoor locations and provides a basis for orientation, navigation, and discovery.</p>
+    </div>
+    <div class="info-card">
+      <h3>GeoJSON-based and portable</h3>
+      <p>Instead of floorplan bitmaps and hand-tuned overlays, IMDF packages structured features such as buildings, footprints, levels, and units in a reusable format.</p>
+    </div>
+    <div class="info-card">
+      <h3>Already used in products</h3>
+      <p>Microsoft Places uses IMDF as the input format for floorplans and requires it to be georeferenced and correlated with building data, which is exactly the kind of workflow gap Open RTLS should address.</p>
+    </div>
+  </div>
+  <img src="assets/zones.webp" alt="FORMATION map with indoor zones marked on the map" class="slide-visual side-visual" />
+</div>
+
+> IMDF is not just a schema to store maps; it is a practical interchange format that real platforms already expect.
+
+---
 ## Standards alignment
 
 Open RTLS is mapping-first, but standards-aligned across the stack.
@@ -148,7 +233,7 @@ Open RTLS is mapping-first, but standards-aligned across the stack.
   <div class="info-card">
     <h3>OGC IMDF</h3>
     <p>The primary indoor mapping model for structured, portable venue data.</p>
-    <p class="card-note">Authoring, validation, and rendering start here.</p>
+    <p class="card-note">Authoring, validation, rendering, and product integrations start here.</p>
   </div>
   <div class="info-card">
     <h3>OMLOX</h3>
@@ -186,6 +271,55 @@ Move from bespoke project-by-project tooling to shared open infrastructure.
 </div>
 
 > The goal is not to replace standards or existing systems, but to reduce duplicated integration work around them.
+
+---
+## Maps stop at the front door
+
+Public maps are great for streets, roads, and cities. They are much weaker where real operations happen.
+
+<div class="media-split">
+  <div class="media-split-cards card-grid one-up compact">
+    <div class="info-card">
+      <h3>Private spaces are mostly blank</h3>
+      <p>Buildings, factories, campuses, event venues, and temporary sites often show up as empty shapes with no operational detail.</p>
+    </div>
+    <div class="info-card">
+      <h3>But the use cases are indoors</h3>
+      <p>Wayfinding, asset search, zone workflows, safety, and situational awareness all depend on a map of the inside.</p>
+    </div>
+    <div class="info-card">
+      <h3>This is why mapping comes first</h3>
+      <p>Before you can use live location well, you need a private map that represents the environment people actually work in.</p>
+    </div>
+  </div>
+  <img src="assets/event-navigation.webp" alt="Indoor event navigation shown on the FORMATION map" class="slide-visual side-visual" />
+</div>
+
+---
+## Georeferencing is more relative than people think
+
+Indoor maps are often aligned against outdoor basemaps, but those basemaps do not perfectly agree with each other.
+
+<div class="card-grid two-up">
+  <div class="info-card">
+    <h3>What we observed</h3>
+    <ul>
+      <li>OpenStreetMap, Google, Here, and Apple can disagree by roughly 1 to 4 meters on the same reference point</li>
+      <li>That is enough to make high-precision indoor paths appear to cut through walls</li>
+      <li>We had one case where shifting the map by about 1.5 meters fixed the operational view</li>
+    </ul>
+  </div>
+  <div class="info-card">
+    <h3>Why it matters for Open RTLS</h3>
+    <ul>
+      <li>Georeferencing is not just a one-time graphics task</li>
+      <li>Map truth has to line up with positioning truth</li>
+      <li>Editors and validators should help teams manage this explicitly</li>
+    </ul>
+  </div>
+</div>
+
+> For indoor RTLS, aligning the map with the tracking system is often more important than aligning perfectly with any single outdoor basemap.
 
 ---
 ## Planned mapping-focused components
