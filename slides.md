@@ -77,7 +77,31 @@
 </div>
 
 ---
-## Groundhog Day
+## Why us?
+
+<div class="card-grid two-up compact">
+  <div class="info-card">
+    <h3>Industry veterans</h3>
+    <p>We have spent years in <span class="hl">mapping, search, geospatial AI, and RTLS-adjacent operations</span>, working with demanding industrial and defense environments.</p>
+  </div>
+  <div class="info-card">
+    <h3>Our experience + Agentic AIs</h3>
+    <p>FORMATION gives us the operational context. XYZ adds <span class="hl">hands-on automation and agentic systems</span> to turn that experience into working tools faster.</p>
+  </div>
+  <div class="info-card">
+    <h3>Rapid prototyping</h3>
+    <p>We are a <span class="hl">small engineering team</span> with a venture-lab mindset: test ideas quickly, validate with users, and tighten the workflow before scaling it out.</p>
+  </div>
+  <div class="info-card">
+    <h3>Proven solution</h3>
+    <p>We already ship a <span class="hl">live operational map</span> for physical operations, with hybrid tracking, search, zones, triggers, and customer deployments that exposed the same integration gaps again and again.</p>
+  </div>
+</div>
+
+> <span class="hl">Bootstrap the contributor ecosystem</span> with MVP components that work.
+
+---
+## Why are we doing this? Groundhog Day!
 
 Integrating real-time location system (RTLS) hardware means doing the same types of integrations over and over again.
 
@@ -201,6 +225,12 @@ Indoor mapping is the <span class="hl">substrate</span> the rest of the RTLS sta
 
 <img src="assets/mapping-stack.svg" alt="Indoor Mapping Stack" class="mapping-stack-visual" />
 
+<!-- .slide: class="image-demo-slide" -->
+---
+## One of our Bitmaps
+
+<img src="assets/event-navigation.webp" alt="Bitmap-based indoor event navigation map" class="slide-visual image-demo-visual" />
+
 ---
 ## What is IMDF?
 
@@ -210,7 +240,6 @@ IMDF stands for <strong><span class="hl">Indoor Mapping Data Format</span></stro
 
 <div class="card-grid two-up compact equal-card-grid">
   <div class="info-card">
-    <div class="eyebrow">Model</div>
     <h3>OGC indoor map model</h3>
     <p>Standardized features for buildings, footprints, levels, units, and navigation context.</p>
   </div>
@@ -218,18 +247,16 @@ IMDF stands for <strong><span class="hl">Indoor Mapping Data Format</span></stro
     <img src="assets/imdf-editor-overview-show-hide-bitmap.gif" alt="IMDF editor showing a bitmap floorplan being shown and hidden while vector map data remains editable" class="slide-visual cell-visual contain-visual" data-reset-on-show="true" />
   </div>
   <div class="info-card">
-    <div class="eyebrow">Format</div>
     <h3>GeoJSON-based and portable</h3>
-    <p>Reusable map data instead of bitmap floorplans and one-off overlays per product.</p>
+    <p>Reusable <span class="hl">vector graphics</span> and map data instead of bitmap floorplans and one-off overlays per product.</p>
   </div>
   <div class="info-card">
-    <div class="eyebrow">Proof</div>
     <h3>Already used in products</h3>
-    <p>Apple Maps introduced IMDF, OGC standardized it, and Microsoft Places now expects it.</p>
+    <p><span class="hl">Apple Maps</span> introduced IMDF, OGC standardized it, and <span class="hl">Microsoft Places</span> now expects it.</p>
   </div>
 </div>
 
-> IMDF creates a semantic hierarchy of venues, levels, units, and other features that includes a navigable graph.
+> IMDF creates a <span class="hl">semantic hierarchy</span> of venues, levels, units, and other features that includes a navigable graph.
 
 <!-- .slide: class="image-demo-slide" -->
 ---
@@ -242,6 +269,50 @@ IMDF stands for <strong><span class="hl">Indoor Mapping Data Format</span></stro
 ## Adding a venue
 
 <img src="assets/imdf-editor-overview-add-venue.gif" alt="IMDF editor workflow adding a venue to an indoor map" class="slide-visual image-demo-visual" data-reset-on-show="true" />
+
+---
+## Editor status today
+
+<div class="card-grid three-up compact">
+  <div class="info-card">
+    <h3>Core workflows are nearly complete</h3>
+    <p>Still bug-heavy. Current focus: <span class="hl">correctness</span>.</p>
+  </div>
+  <div class="info-card">
+    <h3>Open-source release is next</h3>
+    <p><span class="hl">OSS version</span> available soon.</p>
+  </div>
+  <div class="info-card">
+    <h3>Integration follows</h3>
+    <p>Full integration with the OSS <span class="hl">Open RTLS Hub</span> (OMLOX compatible) and FORMATION.</p>
+  </div>
+</div>
+
+> Goal: Beautiful indoor maps powered by <span class="hl">Open RTLS</span>.
+
+---
+## Planned Open RTLS Components
+
+<div class="card-grid two-up">
+  <div class="info-card">
+    <h3>IMDF Editor &amp; Validator</h3>
+    <p>Easy-to-use <span class="hl">OSS tools</span> for authoring and validating IMDF-compatible indoor maps.</p>
+  </div>
+  <div class="info-card">
+    <h3>MapLibre IMDF Renderer</h3>
+    <p><span class="hl">Easily stylable</span> indoor maps with floor switching, navigation, and product-ready rendering.</p>
+  </div>
+  <div class="info-card">
+    <h3>Open RTLS Hub</h3>
+    <p>Aggregates and federates live position updates, with <span class="hl">OMLOX Hub APIs</span> for applications on top.</p>
+  </div>
+  <div class="info-card">
+    <h3>Connector Framework</h3>
+    <p>Plugs different RTLS solutions into the ecosystem with <span class="hl">reusable integrations</span>.</p>
+  </div>
+</div>
+
+> Open <span class="hl">OSS ecosystem</span> so everyone can focus on what they are good at.
 
 ---
 ## Standards alignment
@@ -265,110 +336,6 @@ Open RTLS is mapping-first, but standards-aligned across the stack.
     <p class="card-note">Useful glue for live operational systems.</p>
   </div>
 </div>
-
----
-## The strategic shift
-
-Move from bespoke project-by-project tooling to shared open infrastructure.
-
-<div class="split-callout">
-  <div class="flow-box">
-    <h3>Typical model today</h3>
-    <p>Custom map prep</p>
-    <p>Vendor-specific adapters</p>
-    <p>Ad hoc validation</p>
-    <p>One-off app integration</p>
-  </div>
-  <div class="flow-arrow">→</div>
-  <div class="flow-box emphasized">
-    <h3>Open RTLS model</h3>
-    <p><span class="hl">Reusable IMDF workflows</span></p>
-    <p>Standards-aligned interfaces</p>
-    <p>Shared validation and SDKs</p>
-    <p>Faster delivery for everyone</p>
-  </div>
-</div>
-
-> The goal is not to replace standards or existing systems, but to reduce duplicated integration work around them.
-
----
-## Maps stop at the front door
-
-Most venues are empty polygons on the outdoor map. Indoor maps provide the missing detail.
-
-<div class="media-split">
-  <div class="media-split-cards card-grid one-up compact">
-    <div class="info-card">
-      <h3>Extend outdoor use cases indoor</h3>
-      <p>Search, explore, and routing should continue seamlessly once you enter the venue.</p>
-    </div>
-    <div class="info-card">
-      <h3>Operational context</h3>
-      <p>The indoor map ties together zoning, moving assets and inventory, key infrastructure, and points of interest to provide <span class="hl">situational awareness</span>.</p>
-    </div>
-  </div>
-  <img src="assets/event-navigation.webp" alt="Indoor event navigation shown on the FORMATION map" class="slide-visual side-visual" />
-</div>
-
----
-## Georeferencing is more relative than people think
-
-Indoor maps are often aligned against outdoor basemaps, but those basemaps do not perfectly agree with each other.
-
-<div class="card-grid two-up">
-  <div class="info-card">
-    <h3>What we observed</h3>
-    <ul>
-      <li>OpenStreetMap, Google, Here, and Apple can disagree by roughly 1 to 4 meters on the same reference point</li>
-      <li>That is enough to make high-precision indoor paths appear to cut through walls</li>
-      <li>We had one case where shifting the map by about 1.5 meters fixed the operational view</li>
-    </ul>
-  </div>
-  <div class="info-card">
-    <h3>Why it matters for Open RTLS</h3>
-    <ul>
-      <li>Georeferencing is not just a one-time graphics task</li>
-      <li><span class="hl">Map truth</span> has to line up with <span class="hl">positioning truth</span></li>
-      <li>Editors and validators should help teams manage this explicitly</li>
-    </ul>
-  </div>
-</div>
-
-> For indoor RTLS, aligning the map with the tracking system is often more important than aligning perfectly with any single outdoor basemap.
-
----
-## Planned mapping-focused components
-
-<div class="card-grid two-up">
-  <div class="info-card">
-    <h3>OGC IMDF Editor</h3>
-    <p>Practical tooling for creating and maintaining indoor map data with operational workflows.</p>
-  </div>
-  <div class="info-card">
-    <h3>IMDF Validator</h3>
-    <p>Standards-aligned checks that catch data issues before deployments break in production.</p>
-  </div>
-  <div class="info-card">
-    <h3>MapLibre IMDF Map SDK</h3>
-    <p>Map rendering and application building blocks for venue-aware user experiences.</p>
-  </div>
-  <div class="info-card">
-    <h3>Connector Framework</h3>
-    <p>Bridges mapping workflows to hubs, devices, enterprise systems, and site-specific realities.</p>
-  </div>
-</div>
-
----
-## How the map connects the ecosystem
-
-![Open RTLS Landscape](assets/open-rtls-landscape.svg)
-
-Indoor maps create the <span class="hl">common operating picture</span> between:
-
-- venue operations
-- RTLS hubs and hardware vendors
-- enterprise workflows
-- user-facing map applications
 
 ---
 ## 2026 roadmap
@@ -397,18 +364,22 @@ For this audience, the near-term emphasis is:
 ---
 ## What this means for the market
 
-<div class="card-grid three-up compact">
+<div class="card-grid two-up compact">
   <div class="info-card">
     <h3>Integrators</h3>
     <p>Less bespoke plumbing, faster delivery, and clearer interoperability.</p>
   </div>
   <div class="info-card">
-    <h3>Vendors</h3>
+    <h3>RTLS vendors</h3>
     <p>Shared infrastructure for non-differentiating layers around maps and integration.</p>
   </div>
   <div class="info-card">
-    <h3>Venue owners</h3>
+    <h3>Customers</h3>
     <p>Higher map quality, easier lifecycle management, and more portable data.</p>
+  </div>
+  <div class="info-card">
+    <h3>Everybody else</h3>
+    <p>Lower barrier to building standards-based solutions on top of a robust base platform.</p>
   </div>
 </div>
 
@@ -441,14 +412,3 @@ Open RTLS is currently in the <span class="hl">requirements gathering phase</spa
 [open-rtls.com](https://open-rtls.com)
 
 [open-rtls@tryformation.com](mailto:open-rtls@tryformation.com)
-
----
-## Appendix: positioning and governance
-
-- Open RTLS is initiated by FORMATION GmbH
-- The goal is interoperability, not replacing standards
-- Existing OMLOX hubs can remain part of the architecture
-- Mapping, validation, SDKs, and connectors address the broader integrator reality
-- Governance can evolve over time based on stakeholder feedback
-
-> The immediate goal is a solid open foundation that people can evaluate, use, and improve.
