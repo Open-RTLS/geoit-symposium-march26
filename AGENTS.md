@@ -30,6 +30,7 @@ This is a standalone Reveal.js presentation project for the Open RTLS GEOIT talk
 - Prefer editing `slides.md`, `open-rtls.css`, and SVG assets over introducing extra tooling or build steps.
 - Convert all new bitmap assets (`.png`, `.jpg`, `.jpeg`) to `.webp` before keeping them in the repo, and update references so raw bitmap source files do not get committed.
 - Keep the project static. Do not add frameworks, bundlers, or package manifests unless explicitly requested.
+- Do not run tests, browser-fit checks, or other validation scripts during normal editing unless the user explicitly asks, or immediately before committing.
 - Do not publish or deploy changes unless the user explicitly asks.
 - Do not commit `.cloudflare`, `.wrangler/`, `.env*`, or other local credential/state files.
 
@@ -38,10 +39,13 @@ This is a standalone Reveal.js presentation project for the Open RTLS GEOIT talk
 Primary local preview:
 
 ```bash
+lsof -ti tcp:3000 | xargs kill -9
 bunx serve .
 ```
 
 Then open `http://localhost:3000`.
+
+If port `3000` is already in use, assume it is a stale local dev server from earlier work and kill it before starting a new preview server. Do not switch to a random fallback port.
 
 Optional Cloudflare-style local preview:
 

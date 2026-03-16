@@ -117,64 +117,67 @@ Integrating real-time location system (RTLS) hardware means doing the same types
 
 <img src="assets/logo-wall.webp" alt="Formation partner logo wall" class="partner-wall-image" />
 
+<!-- .slide: class="rtls-intro-slide" -->
+---
 ## What is RTLS?
 
-RTLS stands for <strong><span class="hl">Real-Time Location Systems</span></strong>.
+<p class="rtls-intro-line">RTLS stands for <strong><span class="hl">Real-Time Location Systems</span></strong>.</p>
 
-<div class="media-split">
-  <div class="media-split-cards card-grid one-up compact">
-    <div class="info-card">
-      <h3>Not one technology</h3>
-      <p>RTLS is a family of solutions: UWB, BLE, RFID, Wi-Fi, GPS, QR workflows, and hybrids of all of the above.</p>
-    </div>
-    <div class="info-card">
-      <h3>Indoor GPS alternative</h3>
-      <p>It answers a simple question: where are things now, and how is that changing over time when GPS is weak or unavailable?</p>
-    </div>
-    <div class="info-card">
-      <h3>Business value comes later</h3>
-      <p>Coordinates alone are not enough. The useful output is <span class="hl">search, zones, paths, alerts, navigation, and workflow decisions</span>.</p>
-    </div>
+<div class="card-grid two-up compact equal-card-grid">
+  <div class="info-card">
+    <h3>Not one technology</h3>
+    <p>RTLS spans UWB, BLE, RFID, Wi-Fi, GPS, QR workflows, and hybrids.</p>
   </div>
-  <img src="assets/tracked-welding-equipment-2.webp" alt="Tracked welding equipment with a QR code tag in an industrial environment" class="slide-visual side-visual" />
+  <div class="info-card media-card">
+    <img src="assets/tracked-welding-equipment-2.webp" alt="Tracked welding equipment with a QR code tag in an industrial environment" class="slide-visual cell-visual" />
+  </div>
+  <div class="info-card">
+    <h3>Indoor GPS alternative</h3>
+    <p>Where are things now, and how is that changing when GPS is weak or unavailable?</p>
+  </div>
+  <div class="info-card">
+    <h3>Business value comes later</h3>
+    <p>Coordinates are not enough. Value comes from <span class="hl">search, zones, paths, alerts, navigation, and workflow decisions</span>.</p>
+  </div>
 </div>
 
-> In practice, RTLS only becomes usable when location data is tied to a shared model of places, floors, zones, and assets.
+> RTLS becomes usable when location data is tied to a shared model of places, floors, zones, and assets.
 
+<!-- .slide: class="why-open-slide" -->
 ---
 ## Why Open RTLS is needed
 
-<div class="media-split">
-  <div class="media-split-cards card-grid one-up compact">
-    <div class="info-card">
-      <h3>RTLS projects are still too bespoke</h3>
-      <ul>
-        <li>High CapEx and long deployments are common</li>
-        <li>Accuracy, coverage, and adoption often miss expectations</li>
-        <li>Teams keep rebuilding non-differentiating integration layers</li>
-      </ul>
-    </div>
-    <div class="info-card">
-      <h3>Most stacks optimize for feeds, not context</h3>
-      <ul>
-        <li>Vendors expose coordinates and events</li>
-        <li>Integrators still need places, floors, zones, and map UX</li>
-        <li>Each project remaps the same operational reality again</li>
-      </ul>
-    </div>
-    <div class="info-card">
-      <h3>Open RTLS targets the <span class="hl">missing layer</span></h3>
-      <ul>
-        <li>Shared map workflows and validation</li>
-        <li>Portable interfaces around standards</li>
-        <li>Less plumbing, faster usable products</li>
-      </ul>
-    </div>
+<div class="card-grid two-up compact equal-card-grid">
+  <div class="info-card">
+    <h3>RTLS projects are still too bespoke</h3>
+    <ul>
+      <li>High CapEx and long deployments</li>
+      <li>Accuracy, coverage, and adoption miss expectations</li>
+      <li>Teams rebuild the same integration layer</li>
+    </ul>
   </div>
-  <img src="assets/zone-triggers.webp" alt="Operational zone trigger workflow in an industrial facility" class="slide-visual side-visual" />
+  <div class="info-card media-card">
+    <img src="assets/zone-triggers.webp" alt="Operational zone trigger workflow in an industrial facility" class="slide-visual cell-visual" />
+  </div>
+  <div class="info-card">
+    <h3>Most stacks optimize for feeds, not context</h3>
+    <ul>
+      <li>Vendors expose coordinates and events</li>
+      <li>Integrators still need places, floors, zones, and map UX</li>
+      <li>Every project remaps the same reality</li>
+    </ul>
+  </div>
+  <div class="info-card">
+    <h3>Open RTLS targets the <span class="hl">missing layer</span></h3>
+    <ul>
+      <li>Shared map workflows and validation</li>
+      <li>Portable interfaces around standards</li>
+      <li>Less plumbing, faster products</li>
+    </ul>
+  </div>
 </div>
 
-> The real question is usually not “what are the coordinates?” but “is the asset in the right place at the right time?”
+> The real question is not “what are the coordinates?” but “is the asset in the right place at the right time?”
 
 ---
 ## Why start with indoor mapping?

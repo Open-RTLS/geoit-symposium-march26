@@ -60,8 +60,59 @@
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
           Reveal.layout();
+          fitCurrentSlide();
         });
       });
+    }
+
+    function fitSlide(slide) {
+      if (!slide || slide.classList.contains('stack')) {
+        return;
+      }
+
+      slide.style.zoom = '';
+      slide.classList.remove('is-auto-fitted');
+
+      const maxIterations = 8;
+      const minZoom = 0.48;
+      const footer = document.querySelector('.slide-footer');
+
+      for (let i = 0; i < maxIterations; i += 1) {
+        const visibleBottom =
+          footer && footer.style.display !== 'none'
+            ? footer.getBoundingClientRect().top - 8
+            : window.innerHeight - 8;
+
+        const visibleChildren = Array.from(slide.children).filter(child => {
+          const style = window.getComputedStyle(child);
+          return style.display !== 'none' && style.visibility !== 'hidden';
+        });
+
+        const contentBottom = visibleChildren.reduce((maxBottom, child) => {
+          return Math.max(maxBottom, child.getBoundingClientRect().bottom);
+        }, slide.getBoundingClientRect().top);
+
+        const overflow = contentBottom - visibleBottom;
+        if (overflow <= 2) {
+          break;
+        }
+
+        const currentZoom = Number.parseFloat(slide.style.zoom || '1');
+        const availableHeight = Math.max(1, visibleBottom - slide.getBoundingClientRect().top);
+        const contentHeight = Math.max(1, contentBottom - slide.getBoundingClientRect().top);
+        const nextZoom = Math.max(minZoom, currentZoom * (availableHeight / contentHeight));
+
+        if (Math.abs(nextZoom - currentZoom) < 0.003) {
+          break;
+        }
+
+        slide.style.zoom = nextZoom.toFixed(3);
+        slide.classList.add('is-auto-fitted');
+      }
+    }
+
+    function fitCurrentSlide() {
+      fitSlide(Reveal.getCurrentSlide());
     }
 
     function watchSlideImages(slide) {
@@ -88,6 +139,7 @@
     });
 
     window.addEventListener('load', relayoutSoon, { once: true });
+    window.addEventListener('resize', relayoutSoon);
   </script>
 
 </body>

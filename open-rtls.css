@@ -39,10 +39,15 @@ body {
 
 .reveal .slides section {
   box-sizing: border-box;
+  transform-origin: top center;
 }
 
 .reveal .slides section:not(.stack) {
   padding: 2.6rem 0 3.2rem;
+}
+
+.reveal .slides section.is-auto-fitted {
+  will-change: zoom;
 }
 
 .reveal h1,
@@ -116,6 +121,10 @@ body {
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.86);
   box-shadow: none;
+}
+
+.reveal blockquote p {
+  margin: 0;
 }
 
 .reveal img {
@@ -316,6 +325,124 @@ body {
 .info-card p,
 .info-card li {
   font-size: 0.95rem;
+}
+
+.why-open-grid {
+  align-items: stretch;
+  gap: 0.8rem;
+  margin-top: 0.7rem;
+}
+
+.equal-card-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin-top: 0.7rem;
+  height: 25rem;
+}
+
+.media-card {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+}
+
+.media-card .cell-visual {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 !important;
+  max-width: none;
+  max-height: none;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+}
+
+.why-open-grid .info-card,
+.why-open-visual {
+  min-height: 12.5rem;
+}
+
+.why-open-slide {
+  padding-top: 1.8rem !important;
+}
+
+.rtls-intro-slide {
+  padding-top: 1.8rem !important;
+  padding-bottom: 2rem !important;
+}
+
+.why-open-slide h2 {
+  margin-bottom: 0.7rem;
+}
+
+.rtls-intro-slide h2 {
+  margin-bottom: 0.55rem;
+}
+
+.why-open-slide blockquote {
+  margin-top: 0.8rem;
+  padding: 0.85rem 1rem;
+}
+
+.rtls-intro-slide blockquote {
+  margin-top: 0.45rem;
+  padding: 0.7rem 0.85rem;
+  font-size: 0.98rem;
+}
+
+.why-open-slide .info-card {
+  padding: 0.72rem 0.86rem;
+}
+
+.rtls-intro-slide .info-card {
+  padding: 0.68rem 0.82rem;
+}
+
+.why-open-slide .info-card h3 {
+  margin-bottom: 0.28rem;
+  font-size: 1.5rem;
+}
+
+.rtls-intro-slide .info-card h3 {
+  margin-bottom: 0.28rem;
+  font-size: 1.52rem;
+}
+
+.why-open-slide .info-card ul {
+  margin-top: 0.25rem;
+}
+
+.rtls-intro-slide .info-card ul {
+  margin-top: 0.25rem;
+}
+
+.why-open-slide .info-card p,
+.why-open-slide .info-card li {
+  font-size: 1.12rem;
+  line-height: 1.1;
+}
+
+.rtls-intro-slide .info-card p,
+.rtls-intro-slide .info-card li {
+  font-size: 1.16rem;
+  line-height: 1.08;
+}
+
+.rtls-intro-line {
+  margin: 0 0 0.45rem;
+  font-size: 1.3rem;
+  line-height: 1.15;
+}
+
+.rtls-intro-slide .info-card,
+.why-open-slide .info-card {
+  min-height: 0;
 }
 
 .mapping-stack-visual {
@@ -655,5 +782,140 @@ body {
   .qr-grid {
     max-width: none;
     grid-template-columns: 1fr;
+  }
+
+  .why-open-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .rtls-intro-slide .why-open-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .why-open-slide .info-card,
+  .why-open-slide .why-open-visual {
+    min-height: 0;
+  }
+
+  .rtls-intro-slide .info-card,
+  .rtls-intro-slide .why-open-visual {
+    min-height: 0;
+  }
+
+  .why-open-slide .info-card {
+    padding: 0.68rem 0.8rem;
+  }
+
+  .rtls-intro-slide .info-card {
+    padding: 0.64rem 0.76rem;
+  }
+
+  .why-open-slide .info-card h3 {
+    font-size: 1.34rem;
+  }
+
+  .rtls-intro-slide .info-card h3 {
+    font-size: 1.36rem;
+  }
+
+  .why-open-slide .info-card p,
+  .why-open-slide .info-card li {
+    font-size: 1rem;
+  }
+
+  .rtls-intro-slide .info-card p,
+  .rtls-intro-slide .info-card li {
+    font-size: 1.02rem;
+  }
+
+  .rtls-intro-line {
+    margin-bottom: 0.45rem;
+    font-size: 1.18rem;
+  }
+}
+
+@media (max-height: 820px) {
+  .why-open-slide {
+    padding-top: 1.35rem !important;
+    padding-bottom: 2.4rem !important;
+  }
+
+  .rtls-intro-slide {
+    padding-top: 1.2rem !important;
+    padding-bottom: 1.7rem !important;
+  }
+
+  .why-open-grid {
+    gap: 0.65rem;
+    margin-top: 0.55rem;
+  }
+
+  .equal-card-grid {
+    gap: 0.65rem;
+    margin-top: 0.55rem;
+    height: 22rem;
+  }
+
+  .why-open-slide .info-card,
+  .why-open-slide .why-open-visual {
+    min-height: 0;
+  }
+
+  .rtls-intro-slide .info-card,
+  .rtls-intro-slide .why-open-visual {
+    min-height: 0;
+  }
+
+  .why-open-slide .info-card {
+    padding: 0.62rem 0.74rem;
+  }
+
+  .rtls-intro-slide .info-card {
+    padding: 0.58rem 0.68rem;
+  }
+
+  .why-open-slide .info-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .rtls-intro-slide .info-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.28rem;
+  }
+
+  .why-open-slide .info-card p,
+  .why-open-slide .info-card li {
+    font-size: 0.92rem;
+  }
+
+  .rtls-intro-slide .info-card p,
+  .rtls-intro-slide .info-card li {
+    font-size: 0.95rem;
+  }
+
+  .why-open-slide .info-card ul {
+    margin-left: 1em;
+  }
+
+  .rtls-intro-slide .info-card ul {
+    margin-left: 1em;
+  }
+
+  .why-open-slide blockquote {
+    margin-top: 0.6rem;
+    padding: 0.7rem 0.9rem;
+    font-size: 0.9rem;
+  }
+
+  .rtls-intro-slide blockquote {
+    margin-top: 0.38rem;
+    padding: 0.55rem 0.68rem;
+    font-size: 0.82rem;
+  }
+
+  .rtls-intro-line {
+    margin-bottom: 0.35rem;
+    font-size: 1rem;
   }
 }
