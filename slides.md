@@ -208,30 +208,40 @@ IMDF stands for <strong><span class="hl">Indoor Mapping Data Format</span></stro
 
 <p class="slide-lead imdf-lead">A practical, structured indoor map format for exchanging venue geometry, semantics, and floor-level context.</p>
 
-<div class="imdf-layout">
-  <div class="imdf-points">
-    <div class="info-card imdf-point">
-      <div class="eyebrow">Model</div>
-      <h3>OGC indoor map model</h3>
-      <p>Standardized features for buildings, footprints, levels, units, and navigation context.</p>
-    </div>
-    <div class="info-card imdf-point">
-      <div class="eyebrow">Format</div>
-      <h3>GeoJSON-based and portable</h3>
-      <p>Reusable map data instead of bitmap floorplans and one-off overlays per product.</p>
-    </div>
-    <div class="info-card imdf-point">
-      <div class="eyebrow">Proof</div>
-      <h3>Already used in products</h3>
-      <p>Apple Maps introduced IMDF, OGC standardized it, and Microsoft Places now expects it.</p>
-    </div>
+<div class="card-grid two-up compact equal-card-grid">
+  <div class="info-card">
+    <div class="eyebrow">Model</div>
+    <h3>OGC indoor map model</h3>
+    <p>Standardized features for buildings, footprints, levels, units, and navigation context.</p>
   </div>
-  <div class="imdf-visual-frame">
-    <img src="assets/zones.webp" alt="FORMATION map with indoor zones marked on the map" class="slide-visual imdf-visual" />
+  <div class="info-card media-card">
+    <img src="assets/imdf-editor-overview-show-hide-bitmap.gif" alt="IMDF editor showing a bitmap floorplan being shown and hidden while vector map data remains editable" class="slide-visual cell-visual contain-visual" data-reset-on-show="true" />
+  </div>
+  <div class="info-card">
+    <div class="eyebrow">Format</div>
+    <h3>GeoJSON-based and portable</h3>
+    <p>Reusable map data instead of bitmap floorplans and one-off overlays per product.</p>
+  </div>
+  <div class="info-card">
+    <div class="eyebrow">Proof</div>
+    <h3>Already used in products</h3>
+    <p>Apple Maps introduced IMDF, OGC standardized it, and Microsoft Places now expects it.</p>
   </div>
 </div>
 
 > IMDF creates a semantic hierarchy of venues, levels, units, and other features that includes a navigable graph.
+
+<!-- .slide: class="image-demo-slide" -->
+---
+## Adding a room
+
+<img src="assets/imdf-editor-overview-add-room.gif" alt="IMDF editor workflow adding a room to an indoor map" class="slide-visual image-demo-visual" data-reset-on-show="true" />
+
+<!-- .slide: class="image-demo-slide" -->
+---
+## Adding a venue
+
+<img src="assets/imdf-editor-overview-add-venue.gif" alt="IMDF editor workflow adding a venue to an indoor map" class="slide-visual image-demo-visual" data-reset-on-show="true" />
 
 ---
 ## Standards alignment

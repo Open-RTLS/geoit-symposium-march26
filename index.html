@@ -124,9 +124,29 @@
       });
     }
 
+    function resetSlideGifs(slide) {
+      if (!slide) {
+        return;
+      }
+
+      slide.querySelectorAll('img[data-reset-on-show="true"]').forEach(img => {
+        const originalSrc = img.dataset.originalSrc || img.getAttribute('src');
+        if (!originalSrc) {
+          return;
+        }
+
+        img.dataset.originalSrc = originalSrc;
+
+        const separator = originalSrc.includes('?') ? '&' : '?';
+        const resetSrc = `${originalSrc}${separator}restart=${Date.now()}`;
+        img.setAttribute('src', resetSrc);
+      });
+    }
+
     Reveal.on('ready', event => {
       syncChrome(event.currentSlide);
       updateSlideCount();
+      resetSlideGifs(event.currentSlide);
       watchSlideImages(event.currentSlide);
       relayoutSoon();
     });
@@ -134,6 +154,7 @@
     Reveal.on('slidechanged', event => {
       syncChrome(event.currentSlide);
       updateSlideCount();
+      resetSlideGifs(event.currentSlide);
       watchSlideImages(event.currentSlide);
       relayoutSoon();
     });

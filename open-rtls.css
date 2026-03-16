@@ -363,6 +363,11 @@ body {
   background: transparent;
 }
 
+.media-card .contain-visual {
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.96);
+}
+
 .why-open-grid .info-card,
 .why-open-visual {
   min-height: 12.5rem;
@@ -493,6 +498,16 @@ body {
   margin: 0;
   object-fit: contain;
   align-self: start;
+}
+
+.image-demo-slide {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
+.image-demo-visual {
+  margin-top: 0.75rem;
+  max-height: calc(100vh - 230px);
 }
 
 .slide-lead {
