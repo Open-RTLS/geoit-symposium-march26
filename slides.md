@@ -412,3 +412,31 @@ Open RTLS is currently in the <span class="hl">requirements gathering phase</spa
 [open-rtls.com](https://open-rtls.com)
 
 [open-rtls@tryformation.com](mailto:open-rtls@tryformation.com)
+
+---
+## Q&A
+
+<div class="card-grid two-up compact qna-grid">
+  <div class="info-card qna-card">
+    <div class="qrcode-slot">
+      <img src="assets/open-rtls-qr.svg" alt="QR code for https://open-rtls.com" />
+      <a href="https://open-rtls.com">https://open-rtls.com</a>
+    </div>
+  </div>
+  <div class="info-card qna-card">
+    <div class="qrcode-slot">
+      <img src="assets/tryformation-qr.svg" alt="QR code for https://tryformation.com" />
+      <a href="https://tryformation.com">https://tryformation.com</a>
+    </div>
+  </div>
+  <div class="info-card qna-card">
+    <div class="qrcode-slot">
+      <img src="assets/formationxyz-qr.svg" alt="QR code for https://formationxyz.com" />
+      <a href="https://formationxyz.com">https://formationxyz.com</a>
+    </div>
+  </div>
+  <div class="info-card qna-card qna-text-card">
+    <h3>@jillesvangurp</h3>
+    <p>GitHub, LinkedIn, and the usual places.</p>
+  </div>
+</div>
